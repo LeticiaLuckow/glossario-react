@@ -7,12 +7,15 @@ import {
   SubMenu,
 } from 'react-pro-sidebar';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import ArrayPage from './Pages/Declarações/Array/ArrayPage';
+import ArrayPage from './Pages/Declaracoes/Array/ArrayPage';
 import Constantes from './Pages/Declarações/Constantes/Constantes';
 import 'react-pro-sidebar/dist/css/styles.css';
 import Objetos from './Pages/Declarações/Objetos/Objetos';
 import UseStatePage from './Pages/Estados/UseStatePage/UseStatePage';
 import UseStateSet from './Pages/Estados/UseStateSet/UseStateSet';
+import UseStateInput from './Pages/Estados/UseStateInput/UseStateInput';
+import IfElse from './Pages/Logica/IfElse/IfElse';
+import For from './Pages/Logica/For/For';
 function App() {
   return (
     <BrowserRouter>
@@ -48,7 +51,17 @@ function App() {
                 </MenuItem>
                 <MenuItem>
                   UseState - controlar valor do input
-                  <Link to="/usestateset" />
+                  <Link to="/usestateinput" />
+                </MenuItem>
+              </SubMenu>
+              <SubMenu title="Logica">
+                <MenuItem>
+                  If e Else
+                  <Link to="/ifelse" />
+                </MenuItem>
+                <MenuItem>
+                  For
+                  <Link to="/for" />
                 </MenuItem>
               </SubMenu>
             </Menu>
@@ -60,7 +73,14 @@ function App() {
             <Route path="/array" element={<ArrayPage />}></Route>
             <Route path="/objetos" element={<Objetos />}></Route>
             <Route path="/usestate" element={<UseStatePage />}></Route>
-            <Route path="/usestateset" element={<UseStateSet />}></Route>
+            <Route exact path="/usestateset" element={<UseStateSet />}></Route>
+            <Route
+              exact
+              path="/usestateinput"
+              element={<UseStateInput />}
+            ></Route>
+            <Route exact path="/ifelse" element={<IfElse />}></Route>
+            <Route exact path="/for" element={<For />}></Route>
           </Routes>
         </div>
       </div>

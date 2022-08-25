@@ -1,4 +1,6 @@
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const Objetos = () => {
   const objetoConstante = {
     nome: 'Lucas',
@@ -15,6 +17,8 @@ const Objetos = () => {
       <p>O nome é: {objetoConstante.nome}</p>
       <p>A idade é: {objetoConstante.idade}</p>
       <p>O sexo é: {objetoConstante.sexo}</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

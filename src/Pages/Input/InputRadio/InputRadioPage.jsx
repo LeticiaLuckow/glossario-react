@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const InputRadioPage = () => {
   const [valor, setValor] = useState();
   const inputChange = (e) => {
@@ -40,6 +42,7 @@ const InputRadioPage = () => {
       />
       <label for="espanhol">espanhol</label>
       <p>Idioma: {valor}</p>
+      <Codigo texto={code} />
     </div>
   );
 };

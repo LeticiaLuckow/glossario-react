@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const InputNumberPage = () => {
   const [valor, setValor] = useState(999);
   const inputChange = (e) => {
@@ -15,6 +17,8 @@ const InputNumberPage = () => {
       />
       <input type={'number'} value={valor} onChange={inputChange} />
       <p>valor atual do estado/input é: {valor}</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

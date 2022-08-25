@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const UseStateSet = () => {
   const [valor, setValor] = useState(999);
 
@@ -17,6 +19,8 @@ const UseStateSet = () => {
         alterar valor para 55
       </button>
       <p>valor atual do estado é: {valor}</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

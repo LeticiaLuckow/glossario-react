@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const IfElse = () => {
   const [valor, setValor] = useState(999);
   const [maior, setMaior] = useState('maior');
@@ -20,6 +22,8 @@ const IfElse = () => {
       />
       <input value={valor} onChange={inputChange} />
       <p>valor atual do estado/input é {maior} que 30</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

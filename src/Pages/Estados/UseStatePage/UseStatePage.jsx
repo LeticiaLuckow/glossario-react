@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const UseStatePage = () => {
   const [valor, setValor] = useState(999);
   return (
@@ -10,6 +12,8 @@ const UseStatePage = () => {
         }
       />
       <p>valor inicial do estado é: {valor}</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

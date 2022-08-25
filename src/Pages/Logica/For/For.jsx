@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const For = () => {
   const [valor, setValor] = useState();
   const [soma, setSoma] = useState(0);
@@ -32,6 +34,8 @@ const For = () => {
       {valor > 30 && (
         <p style={{ color: 'red' }}>O valor deve ser menor ou igual a 30</p>
       )}
+
+      <Codigo texto={code} />
     </div>
   );
 };

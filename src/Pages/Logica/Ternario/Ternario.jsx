@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const Ternario = () => {
   const [valor, setValor] = useState();
   const [maior, setMaior] = useState('menor');
@@ -20,6 +22,8 @@ const Ternario = () => {
       <input value={valor} onChange={inputChange} />
       <p>valor atual do estado/input é: {valor}</p>
       <p>valor do input é {maior} que 10</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

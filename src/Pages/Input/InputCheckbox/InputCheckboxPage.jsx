@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const InputCheckboxPage = () => {
   const [portugues, setPortugues] = useState(false);
   const [ingles, setIngles] = useState(false);
@@ -20,7 +22,7 @@ const InputCheckboxPage = () => {
           setPortugues(e.target.checked);
         }}
       />
-      <label for="portugues">portugues</label>
+      <label htmlFor="portugues">portugues</label>
       <br />{' '}
       <input
         type="checkbox"
@@ -30,7 +32,7 @@ const InputCheckboxPage = () => {
           setIngles(e.target.checked);
         }}
       />
-      <label for="ingles">ingles</label>
+      <label htmlFor="ingles">ingles</label>
       <br />
       <input
         type="checkbox"
@@ -41,11 +43,12 @@ const InputCheckboxPage = () => {
           setEspanhol(e.target.checked);
         }}
       />
-      <label for="espanhol">espanhol</label>
+      <label htmlFor="espanhol">espanhol</label>
       <p>Idiomas:</p>
       <p>{portugues && <span>pt</span>}</p>
       <p>{ingles && <span>en</span>}</p>
       <p>{espanhol && <span>es</span>}</p>
+      <Codigo texto={code} />
     </div>
   );
 };

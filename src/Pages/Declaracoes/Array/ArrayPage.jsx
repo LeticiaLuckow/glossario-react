@@ -1,4 +1,6 @@
+import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
+import { code } from './code';
 const ArrayPage = () => {
   const arrayConstante = [2, 4, 10];
   return (
@@ -11,6 +13,8 @@ const ArrayPage = () => {
       <p>a primeira posição do array é {arrayConstante[0]}</p>
       <p>a segunda posição do array é {arrayConstante[1]}</p>
       <p>o tamanho do array é {arrayConstante.length}</p>
+
+      <Codigo texto={code} />
     </div>
   );
 };

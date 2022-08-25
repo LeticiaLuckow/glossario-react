@@ -22,6 +22,14 @@ import InputCheckboxPage from './Pages/Input/InputCheckbox/InputCheckboxPage';
 import InputNumberPage from './Pages/Input/InputNumber/InputNumberPage';
 import InputRadioPage from './Pages/Input/InputRadio/InputRadioPage';
 import InputTextPage from './Pages/Input/InputText/InputTextPage';
+import SwitchPage from './Pages/Logica/Switch/SwitchPage';
+import ForEachPage from './Pages/Logica/ForEach/ForEachPage';
+import ComponenteSemProp from './Pages/Componentes/ComponenteSemProp/ComponenteSemProp';
+import ComponenteComProp from './Pages/Componentes/ComponenteComProp/ComponenteComProp';
+import ComponenteComFuncao from './Pages/Componentes/ComponenteComFuncao/ComponenteComFuncao';
+import FuncoesSemProp from './Pages/Funcoes/FuncoesSemProp/FuncoesSemProp';
+import FuncoesComProp from './Pages/Funcoes/FuncoesComProp/FuncoesComProp';
+
 function App() {
   return (
     <BrowserRouter>
@@ -70,11 +78,11 @@ function App() {
                   <Link to="/for" />
                 </MenuItem>
                 <MenuItem>
-                  Switch
+                  Switch*
                   <Link to="/switch" />
                 </MenuItem>
                 <MenuItem>
-                  Foreach
+                  Foreach*
                   <Link to="/foreach" />
                 </MenuItem>
                 <MenuItem>
@@ -106,6 +114,34 @@ function App() {
                   <Link to="/inputtext" />
                 </MenuItem>
               </SubMenu>
+              <SubMenu title="Componentes">
+                <MenuItem>
+                  Sem Propriedade*
+                  <Link to="/semprop" />
+                </MenuItem>
+
+                <MenuItem>
+                  Com Propriedade*
+                  <Link to="/comprop" />
+                </MenuItem>
+
+                <MenuItem>
+                  Recebendo uma função*
+                  <Link to="/comfuncao" />
+                </MenuItem>
+              </SubMenu>
+
+              <SubMenu title="Funções">
+                <MenuItem>
+                  Sem Propriedade*
+                  <Link to="/funcsemprop" />
+                </MenuItem>
+
+                <MenuItem>
+                  Com Propriedade*
+                  <Link to="/funccomprop" />
+                </MenuItem>
+              </SubMenu>
             </Menu>
           </SidebarContent>
         </ProSidebar>
@@ -123,8 +159,8 @@ function App() {
             ></Route>
             <Route exact path="/ifelse" element={<IfElse />}></Route>
             <Route exact path="/for" element={<For />}></Route>
-            <Route exact path="/switch" element={<For />}></Route>
-            <Route exact path="/foreach" element={<For />}></Route>
+            <Route exact path="/switch" element={<SwitchPage />}></Route>
+            <Route exact path="/foreach" element={<ForEachPage />}></Route>
             <Route exact path="/ternario" element={<Ternario />}></Route>
             <Route exact path="/console" element={<ConsoleLog />}></Route>
             <Route
@@ -143,6 +179,33 @@ function App() {
               element={<InputRadioPage />}
             ></Route>
             <Route exact path="/inputtext" element={<InputTextPage />}></Route>
+
+            <Route
+              exact
+              path="/semprop"
+              element={<ComponenteSemProp />}
+            ></Route>
+            <Route
+              exact
+              path="/comprop"
+              element={<ComponenteComProp />}
+            ></Route>
+            <Route
+              exact
+              path="/comfuncao"
+              element={<ComponenteComFuncao />}
+            ></Route>
+
+            <Route
+              exact
+              path="/funcsemprop"
+              element={<FuncoesSemProp />}
+            ></Route>
+            <Route
+              exact
+              path="/funccomprop"
+              element={<FuncoesComProp />}
+            ></Route>
           </Routes>
         </div>
       </div>

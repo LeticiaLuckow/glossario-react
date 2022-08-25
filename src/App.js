@@ -29,6 +29,11 @@ import ComponenteComProp from './Pages/Componentes/ComponenteComProp/ComponenteC
 import ComponenteComFuncao from './Pages/Componentes/ComponenteComFuncao/ComponenteComFuncao';
 import FuncoesSemProp from './Pages/Funcoes/FuncoesSemProp/FuncoesSemProp';
 import FuncoesComProp from './Pages/Funcoes/FuncoesComProp/FuncoesComProp';
+import RenderCondicional from './Pages/Renderizacao/RenderCondicional/RenderCondicional';
+import RenderMapLista from './Pages/Renderizacao/RenderMapLista/RenderMapLista';
+import RenderTernario from './Pages/Renderizacao/RenderTernario/RenderTernario';
+import FetchPage from './Pages/Requisicoes/Fetch/FetchPage';
+import AxiosPage from './Pages/Requisicoes/Axios/AxiosPage';
 
 function App() {
   return (
@@ -114,17 +119,16 @@ function App() {
                   <Link to="/inputtext" />
                 </MenuItem>
               </SubMenu>
+
               <SubMenu title="Componentes">
                 <MenuItem>
                   Sem Propriedade*
                   <Link to="/semprop" />
                 </MenuItem>
-
                 <MenuItem>
                   Com Propriedade*
                   <Link to="/comprop" />
                 </MenuItem>
-
                 <MenuItem>
                   Recebendo uma função*
                   <Link to="/comfuncao" />
@@ -136,10 +140,35 @@ function App() {
                   Sem Propriedade*
                   <Link to="/funcsemprop" />
                 </MenuItem>
-
                 <MenuItem>
                   Com Propriedade*
                   <Link to="/funccomprop" />
+                </MenuItem>
+              </SubMenu>
+
+              <SubMenu title="Renderização">
+                <MenuItem>
+                  Renderização Condicional*
+                  <Link to="/rendercond" />
+                </MenuItem>
+                <MenuItem>
+                  Renderização de Lista / Map*
+                  <Link to="/rendermap" />
+                </MenuItem>
+                <MenuItem>
+                  Renderização Ternário*
+                  <Link to="/renderternario" />
+                </MenuItem>
+              </SubMenu>
+
+              <SubMenu title="Requisição para APIs">
+                <MenuItem>
+                  fetch*
+                  <Link to="/fetch" />
+                </MenuItem>
+                <MenuItem>
+                  Axios*
+                  <Link to="/axios" />
                 </MenuItem>
               </SubMenu>
             </Menu>
@@ -206,6 +235,21 @@ function App() {
               path="/funccomprop"
               element={<FuncoesComProp />}
             ></Route>
+
+            <Route
+              exact
+              path="/rendercond"
+              element={<RenderCondicional />}
+            ></Route>
+            <Route exact path="/rendermap" element={<RenderMapLista />}></Route>
+            <Route
+              exact
+              path="/renderternario"
+              element={<RenderTernario />}
+            ></Route>
+
+            <Route exact path="/fetch" element={<FetchPage />}></Route>
+            <Route exact path="/axios" element={<AxiosPage />}></Route>
           </Routes>
         </div>
       </div>

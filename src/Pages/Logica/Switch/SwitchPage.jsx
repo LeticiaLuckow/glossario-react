@@ -3,6 +3,25 @@ import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
 import { code } from './code';
 const SwitchPage = () => {
+  const [valor, setValor] = useState();
+  const [texto, setTexto] = useState();
+
+  const inputChange = (e) => {
+    const valorInput = e.target.valueAsNumber;
+    setValor(valorInput);
+
+    switch (valorInput) {
+      case 0:
+        setTexto('Desligado');
+        break;
+      case 1:
+        setTexto('Ligado');
+        break;
+      default:
+        setTexto('insira 0 ou 1');
+    }
+  };
+
   return (
     <div>
       <Descricao
@@ -10,11 +29,11 @@ const SwitchPage = () => {
           'O Switch executa um trecho de código para cada valor recebido. E pode executar um código padrão caso o valor atual não esteja listado (default)'
         }
       />
-      <p style={{ color: 'red', fontWeight: 'bold' }}>Em Construção</p>
-      <p style={{ color: 'red', fontWeight: 'bold' }}>
-        Criar exemplo com input: Valor 0 exibir "desligado", valor 1 exibir
-        "ligado", outro valor exibir: "insira 0 ou 1"
-      </p>
+
+      <input type="number" value={valor} onChange={inputChange} />
+
+      <p> o valor do input é {valor}</p>
+      <p>{texto}</p>
 
       <Codigo texto={code} />
     </div>

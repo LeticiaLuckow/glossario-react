@@ -1,4 +1,4 @@
-export const code = `let x = "0";
+export const code = `
 const [valor, setValor] = useState()
 const [texto, setTexto] = useState()
 

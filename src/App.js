@@ -83,11 +83,11 @@ function App() {
                   <Link to="/for" />
                 </MenuItem>
                 <MenuItem>
-                  Switch*
+                  Switch
                   <Link to="/switch" />
                 </MenuItem>
                 <MenuItem>
-                  Foreach*
+                  Foreach
                   <Link to="/foreach" />
                 </MenuItem>
                 <MenuItem>

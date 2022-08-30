@@ -2,7 +2,11 @@ import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
 import { code } from './code';
 
-const ComponentFilho = ({ texto, numero }) => {
+type ComponentFilhoType = {
+  texto: string;
+  numero: number;
+};
+const ComponentFilho = ({ texto, numero }: ComponentFilhoType) => {
   return (
     <p style={{ fontWeight: 'bold' }}>
       {texto}, {numero}
@@ -10,12 +14,12 @@ const ComponentFilho = ({ texto, numero }) => {
   );
 };
 
-const ComponenteComProp = () => {
+const ComponenteTypescript = () => {
   return (
     <div>
       <Descricao
         desc={
-          'Um componente pode ser criado e não receber nenhuma propriedade, ou receber uma ou mais propriedades, podendo ser strings, números, funções, objetos, etc... O exemplo a seguir recebe um texto como propriedade'
+          'Um componente Typescript que recebe propriedades, precisa ter as suas propriedades tipadas, descrevendo qual o tipo esperado para cada parâmetro'
         }
       />
 
@@ -25,4 +29,4 @@ const ComponenteComProp = () => {
   );
 };
 
-export default ComponenteComProp;
+export default ComponenteTypescript;

@@ -36,6 +36,7 @@ import RenderMapLista from './Pages/Renderizacao/RenderMapLista/RenderMapLista';
 import RenderTernario from './Pages/Renderizacao/RenderTernario/RenderTernario';
 import FetchPage from './Pages/Requisicoes/Fetch/FetchPage';
 import AxiosPage from './Pages/Requisicoes/Axios/AxiosPage';
+import ComponenteTypescript from 'Pages/Componentes/ComponenteTypescript/ComponenteTypescript';
 
 function App() {
   return (
@@ -124,26 +125,30 @@ function App() {
 
               <SubMenu title="Componentes">
                 <MenuItem>
-                  Sem Propriedade*
+                  Sem Propriedade
                   <Link to="/semprop" />
                 </MenuItem>
                 <MenuItem>
-                  Com Propriedade*
+                  Com Propriedade
                   <Link to="/comprop" />
                 </MenuItem>
                 <MenuItem>
-                  Recebendo uma função*
+                  Recebendo uma função
                   <Link to="/comfuncao" />
+                </MenuItem>
+                <MenuItem>
+                  Com TypeScript
+                  <Link to="/componentets" />
                 </MenuItem>
               </SubMenu>
 
               <SubMenu title="Funções">
                 <MenuItem>
-                  Sem Propriedade*
+                  Sem Propriedade
                   <Link to="/funcsemprop" />
                 </MenuItem>
                 <MenuItem>
-                  Com Propriedade*
+                  Com Propriedade
                   <Link to="/funccomprop" />
                 </MenuItem>
 
@@ -230,6 +235,11 @@ function App() {
               exact
               path="/comfuncao"
               element={<ComponenteComFuncao />}
+            ></Route>
+            <Route
+              exact
+              path="/componentets"
+              element={<ComponenteTypescript />}
             ></Route>
 
             <Route

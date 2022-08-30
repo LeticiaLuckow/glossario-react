@@ -1,6 +1,6 @@
 export const code = `const [valor, setValor] = useState(0)
 
-const alterarValor = (valorRecebido) => {
+const alterarValor = (valorRecebido: number) => {
   setValor(valorRecebido)
 }
 

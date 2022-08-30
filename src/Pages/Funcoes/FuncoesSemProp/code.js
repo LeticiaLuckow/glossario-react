@@ -1,6 +1,6 @@
 export const code = `const [valor, setValor] = useState(0)
 
-cont alterarValor = () => {
+const alterarValor = () => {
   setValor(valor + 1)
 }
 

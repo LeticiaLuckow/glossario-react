@@ -27,8 +27,10 @@ import ForEachPage from './Pages/Logica/ForEach/ForEachPage';
 import ComponenteSemProp from './Pages/Componentes/ComponenteSemProp/ComponenteSemProp';
 import ComponenteComProp from './Pages/Componentes/ComponenteComProp/ComponenteComProp';
 import ComponenteComFuncao from './Pages/Componentes/ComponenteComFuncao/ComponenteComFuncao';
+
 import FuncoesSemProp from './Pages/Funcoes/FuncoesSemProp/FuncoesSemProp';
 import FuncoesComProp from './Pages/Funcoes/FuncoesComProp/FuncoesComProp';
+import FuncoesTypeScript from 'Pages/Funcoes/FuncoesTypeScript/FuncoesTypeScript';
 import RenderCondicional from './Pages/Renderizacao/RenderCondicional/RenderCondicional';
 import RenderMapLista from './Pages/Renderizacao/RenderMapLista/RenderMapLista';
 import RenderTernario from './Pages/Renderizacao/RenderTernario/RenderTernario';
@@ -144,6 +146,11 @@ function App() {
                   Com Propriedade*
                   <Link to="/funccomprop" />
                 </MenuItem>
+
+                <MenuItem>
+                  Função com TypeScript
+                  <Link to="/functypescript" />
+                </MenuItem>
               </SubMenu>
 
               <SubMenu title="Renderização">
@@ -234,6 +241,11 @@ function App() {
               exact
               path="/funccomprop"
               element={<FuncoesComProp />}
+            ></Route>
+            <Route
+              exact
+              path="/functypescript"
+              element={<FuncoesTypeScript />}
             ></Route>
 
             <Route

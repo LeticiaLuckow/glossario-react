@@ -1,6 +1,6 @@
 # Glossário React
 
-Esse site é um projeto feito em React, onde se trata de um glossário com resumo, exemplos e explições das principais ferramentas necessarias para desenvolver projetos em React e Javascript.
+Esse site é um projeto feito em React, onde se trata de um glossário com resumo, exemplos e explicações das principais ferramentas necessárias para desenvolver projetos em React e Javascript.
 
 ## Instalação
 

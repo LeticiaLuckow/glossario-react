@@ -5,9 +5,9 @@ export const code = `const [azul, setAzul] = useState(false)
 return(
   <>
     {azul ? (
-      <p style={{color: blue}}>Texto azul exibido<p/>
+      <p style={{color: blue}}>Texto azul exibido</p>
     ) : (
-      <p style={{color: red}}>Texto vermelho exibido<p/>
+      <p style={{color: red}}>Texto vermelho exibido</p>
     )}
   </>
 )

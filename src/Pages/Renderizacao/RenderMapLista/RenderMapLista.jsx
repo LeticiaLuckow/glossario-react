@@ -1,9 +1,10 @@
-import { useState } from 'react';
 import Codigo from '../../../components/Codigo';
 import Descricao from '../../../components/Descricao';
 import { code } from './code';
 
 const RenderMapLista = () => {
+  const nomes = ['João', 'Francisco', 'José'];
+
   return (
     <div>
       <Descricao
@@ -11,10 +12,11 @@ const RenderMapLista = () => {
           'Através da função map podemos exibir uma lista de componentes através de um array. Cada elemento renderizado precisa receber a propriedade key, que é um valor que identifica esse elemento'
         }
       />
-      <p style={{ color: 'red', fontWeight: 'bold' }}>Em Construção</p>
-      <p style={{ color: 'red', fontWeight: 'bold' }}>
-        Criar exemplo que exiba uma lista de nomes vindas de um array
-      </p>
+      <p>Criar exemplo que exiba uma lista de nomes vindas de um array</p>
+
+      {nomes.map((bolinha) => (
+        <p key={bolinha}>{bolinha}</p>
+      ))}
 
       <Codigo texto={code} />
     </div>

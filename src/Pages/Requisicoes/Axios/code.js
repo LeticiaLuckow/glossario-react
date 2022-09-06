@@ -4,8 +4,8 @@ axios.get(
   'https://api.themoviedb.org/3/movie/upcoming?api_key=c390b288e9beb4c611edc921516ea70f&language=en-US&page=1',
 )
   .then((data) => {
-    console.log(data.results);
-    setNewMovies(data.results);
+    console.log(data);
+    setNewMovies(data);
   });
 
 

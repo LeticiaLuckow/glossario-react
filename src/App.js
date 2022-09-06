@@ -160,26 +160,26 @@ function App() {
 
               <SubMenu title="Renderização">
                 <MenuItem>
-                  Renderização Condicional*
+                  Renderização Condicional
                   <Link to="/rendercond" />
                 </MenuItem>
                 <MenuItem>
-                  Renderização de Lista / Map*
+                  Renderização de Lista / Map
                   <Link to="/rendermap" />
                 </MenuItem>
                 <MenuItem>
-                  Renderização Ternário*
+                  Renderização Ternário
                   <Link to="/renderternario" />
                 </MenuItem>
               </SubMenu>
 
               <SubMenu title="Requisição para APIs">
                 <MenuItem>
-                  fetch*
+                  fetch
                   <Link to="/fetch" />
                 </MenuItem>
                 <MenuItem>
-                  Axios*
+                  Axios
                   <Link to="/axios" />
                 </MenuItem>
               </SubMenu>
